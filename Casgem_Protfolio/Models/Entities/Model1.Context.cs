@@ -13,10 +13,10 @@ namespace Casgem_Protfolio.Models.Entities
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class casgemPorfolioEntities7 : DbContext
+    public partial class casgemPorfolioEntities : DbContext
     {
-        public casgemPorfolioEntities7()
-            : base("name=casgemPorfolioEntities7")
+        public casgemPorfolioEntities()
+            : base("name=casgemPorfolioEntities")
         {
         }
     
@@ -27,6 +27,7 @@ namespace Casgem_Protfolio.Models.Entities
     
         public virtual DbSet<TblFeature> TblFeature { get; set; }
         public virtual DbSet<TblMessage> TblMessage { get; set; }
+        public virtual DbSet<TblProject> TblProject { get; set; }
         public virtual DbSet<TblService> TblService { get; set; }
     }
 }

@@ -24,6 +24,15 @@
           <Property Name="MessageSubject" Type="nvarchar" MaxLength="100" />
           <Property Name="Content" Type="nvarchar" MaxLength="1000" />
         </EntityType>
+        <EntityType Name="TblProject">
+          <Key>
+            <PropertyRef Name="ProjectID" />
+          </Key>
+          <Property Name="ProjectID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProjectName" Type="nchar" MaxLength="10" />
+          <Property Name="ProjectDetails" Type="nchar" MaxLength="100" />
+          <Property Name="ProjectURL" Type="nchar" MaxLength="100" />
+        </EntityType>
         <EntityType Name="TblService">
           <Key>
             <PropertyRef Name="ServiceID" />
@@ -37,6 +46,7 @@
         <EntityContainer Name="casgemPorfolioModelStoreContainer">
           <EntitySet Name="TblFeature" EntityType="Self.TblFeature" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblMessage" EntityType="Self.TblMessage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblProject" EntityType="Self.TblProject" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblService" EntityType="Self.TblService" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
@@ -63,6 +73,15 @@
           <Property Name="MessageSubject" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Content" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="TblProject">
+          <Key>
+            <PropertyRef Name="ProjectID" />
+          </Key>
+          <Property Name="ProjectID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="ProjectDetails" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="ProjectURL" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+        </EntityType>
         <EntityType Name="TblService">
           <Key>
             <PropertyRef Name="ServiceID" />
@@ -73,9 +92,10 @@
           <Property Name="ServiceNumber" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="ServiceContent" Type="String" MaxLength="1000" FixedLength="true" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="casgemPorfolioEntities7" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="casgemPorfolioEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="TblFeature" EntityType="Self.TblFeature" />
           <EntitySet Name="TblMessage" EntityType="Self.TblMessage" />
+          <EntitySet Name="TblProject" EntityType="Self.TblProject" />
           <EntitySet Name="TblService" EntityType="Self.TblService" />
         </EntityContainer>
       </Schema>
@@ -83,7 +103,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="casgemPorfolioModelStoreContainer" CdmEntityContainer="casgemPorfolioEntities7">
+        <EntityContainerMapping StorageEntityContainer="casgemPorfolioModelStoreContainer" CdmEntityContainer="casgemPorfolioEntities">
           <EntitySetMapping Name="TblFeature">
             <EntityTypeMapping TypeName="casgemPorfolioModel.TblFeature">
               <MappingFragment StoreEntitySet="TblFeature">
@@ -102,6 +122,16 @@
                 <ScalarProperty Name="SendMail" ColumnName="SendMail" />
                 <ScalarProperty Name="MessageSubject" ColumnName="MessageSubject" />
                 <ScalarProperty Name="Content" ColumnName="Content" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblProject">
+            <EntityTypeMapping TypeName="casgemPorfolioModel.TblProject">
+              <MappingFragment StoreEntitySet="TblProject">
+                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+                <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+                <ScalarProperty Name="ProjectDetails" ColumnName="ProjectDetails" />
+                <ScalarProperty Name="ProjectURL" ColumnName="ProjectURL" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

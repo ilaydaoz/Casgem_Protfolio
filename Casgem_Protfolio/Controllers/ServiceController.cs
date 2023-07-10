@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Casgem_Protfolio.Models.Entities;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-
-using Casgem_Protfolio.Models.Entities;
 
 namespace Casgem_Protfolio.Controllers
 {
     public class ServiceController : Controller
     {
-        casgemPorfolioEntities7 db = new casgemPorfolioEntities7();
+        casgemPorfolioEntities db = new casgemPorfolioEntities();
 
         public ActionResult Index()
         {
