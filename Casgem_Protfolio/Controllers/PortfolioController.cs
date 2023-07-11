@@ -32,5 +32,19 @@ namespace Casgem_Protfolio.Controllers
             x.FeatureImageURL).FirstOrDefault();
             return PartialView();
         }
+        public PartialViewResult MyResume ()
+        {
+            var values = db.TblResume.ToList();
+            return PartialView();
+    
+        }
+        public PartialViewResult PartialStatistic()
+        {
+            ViewBag.totalService = db.TblService.Count();
+            ViewBag.totalService = db.TblMessage.Count();
+            ViewBag.totalThanksMessage = db.TblMessage.Where(x =>
+            x.MessageSubject == "Teşekürler").Count();
+            return PartialView();
+        }
     }
 }
