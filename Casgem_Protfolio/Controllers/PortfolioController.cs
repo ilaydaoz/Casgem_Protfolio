@@ -1,8 +1,5 @@
 ﻿using Casgem_Protfolio.Models.Entities;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Casgem_Protfolio.Controllers
@@ -46,6 +43,11 @@ namespace Casgem_Protfolio.Controllers
             x.MessageSubject == "Teşekkür").Count();
             ViewBag.happyCustomer = 12;
             return PartialView();
+        }
+        public FileResult DownloadCV(string file)
+        {
+            byte[] fileBytes = System.IO.File.ReadAllBytes(Server.MapPath("~/Templates/file/" + file + ""));
+            return File(fileBytes, System.Net.Mime.MediaTypeNames.Application.Octet, file);
         }
     }
 }

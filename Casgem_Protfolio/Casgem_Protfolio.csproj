@@ -404,6 +404,7 @@
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Statistic\Index.cshtml" />
+    <Content Include="Templates\file\ilayda_ozken.pdf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
