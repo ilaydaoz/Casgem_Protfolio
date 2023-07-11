@@ -2,7 +2,7 @@
 @{
     Layout = null;
 }
-@Html.Action("PartialHead","Portfolio")
+
 <!--
 Author: W3layouts
 Author URL: http://w3layouts.com
@@ -10,19 +10,7 @@ Author URL: http://w3layouts.com
 <!doctype html>
 <html lang="en">
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>Alexander Personal Portfolio Category Bootstrap Responsive Website Template | Contact : W3layouts</title>
-
-    <!-- google fonts -->
-    <link href="//fonts.googleapis.com/css2?family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <!-- Template CSS -->
-    <link rel="stylesheet" href="assets/css/style-starter.css">
-</head>
+@Html.Action("PartialHead", "Portfolio")
 
 <body>
     <!-- header -->
@@ -81,18 +69,26 @@ Author URL: http://w3layouts.com
                             <div class="twice-two">
                                 <input type="text" class="form-control" name="NameSurname" id="w3lName" placeholder="Adınız"
                                        required="">
-                                <input type="email" class="form-control" name="SendMail" id="w3lSender" placeholder="Giriniz mail"
+                                <input type="email" class="form-control" name="SenderMail" id="w3lSender" placeholder="Mail Adresiniz"
                                        required="">
                             </div>
                             <div class="twice">
-                                <input type="text" class="form-control" name="w3lSubject" id="w3lSubject"
-                                       placeholder="Subject" required="">
+                                <input type="text" class="form-control" name="MessageSubject" id="w3lSubject"
+                                       placeholder="Konu" required="">
                             </div>
-                            <textarea name="w3lMessage" class="form-control" id="w3lMessage" placeholder="Message"
+                            <textarea name="Content" class="form-control" id="w3lMessage" placeholder="Mesajınızı Yazabilirsiniz"
                                       required=""></textarea>
+
                             <div class="text-right">
-                                <button type="submit" class="btn btn-primary btn-style mt-4">Send Message</button>
+                                <button type="submit" class="btn btn-primary btn-style mt-4" onclick="showAlert()">Mesajı Gönder</button>
                             </div>
+
+                            <script>
+                                function showAlert() {
+                                    alert("Mesajınız gönderildi!");
+                                }
+                            </script>
+
                         </form>
                     </div>
                 </div>
@@ -101,7 +97,7 @@ Author URL: http://w3layouts.com
     </section>
     <!-- /contact1 -->
     <div class="map-iframe">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d317718.69319292053!2d-0.3817765050863085!3d51.528307984912544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C+UK!5e0!3m2!1sen!2spl!4v1562654563739!5m2!1sen!2spl"
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d195360.35335232734!2d32.68022791956674!3d40.08644068234652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40820fdad0c982a9%3A0xf13ed2bab75c76d6!2sAnkara%20Esenbo%C4%9Fa%20Havaliman%C4%B1!5e0!3m2!1str!2str!4v1689066301501!5m2!1str!2str"
                 width="100%" height="400" frameborder="0" style="border: 0px;" allowfullscreen=""></iframe>
     </div>
     <!-- //contact block -->
@@ -130,7 +126,7 @@ Author URL: http://w3layouts.com
             <span class="fa fa-angle-up"></span>
         </button>
         <script>
-    // When the user scrolls down 20px from the top of the document, show the button
+            // When the user scrolls down 20px from the top of the document, show the button
             window.onscroll = function () {
                 scrollFunction()
             };
@@ -158,7 +154,7 @@ Author URL: http://w3layouts.com
     <script src="assets/js/jquery-3.3.1.min.js"></script><!-- default jQuery -->
     <!-- /typig-text-->
     <script>
-    const typedTextSpan = document.querySelector(".typed-text");
+        const typedTextSpan = document.querySelector(".typed-text");
         const cursorSpan = document.querySelector(".cursor");
 
         const textArray = ["UI/UX Designer", "Freelancer", "Web developer"];
@@ -206,7 +202,7 @@ Author URL: http://w3layouts.com
 
     <!-- script for services -->
     <script>
-    $(document).ready(function () {
+        $(document).ready(function () {
             $('.owl-two').owlCarousel({
                 loop: true,
                 margin: 30,
@@ -239,7 +235,7 @@ Author URL: http://w3layouts.com
     <!-- //script for services -->
     <!-- script for tesimonials carousel slider -->
     <script>
-    $(document).ready(function () {
+        $(document).ready(function () {
             $("#owl-demo1").owlCarousel({
                 loop: true,
                 margin: 20,
@@ -266,7 +262,7 @@ Author URL: http://w3layouts.com
     <!-- video popup -->
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script>
-    $(document).ready(function () {
+        $(document).ready(function () {
             $('.popup-with-zoom-anim').magnificPopup({
                 type: 'inline',
 
@@ -307,7 +303,7 @@ Author URL: http://w3layouts.com
     <!-- //stats number counter -->
     <!-- disable body scroll which navbar is in active -->
     <script>
-    $(function () {
+        $(function () {
             $('.navbar-toggler').click(function () {
                 $('body').toggleClass('noscroll');
             })
@@ -315,7 +311,7 @@ Author URL: http://w3layouts.com
     <!-- disable body scroll which navbar is in active -->
     <!--/MENU-JS-->
     <script>
-    $(window).on("scroll", function () {
+        $(window).on("scroll", function () {
             var scroll = $(window).scrollTop();
 
             if (scroll >= 80) {
