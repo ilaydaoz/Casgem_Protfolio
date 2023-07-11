@@ -32,12 +32,14 @@ namespace Casgem_Protfolio.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
         [HttpGet]
         public ActionResult UpdateService(int id)
         {
             var value = db.TblService.Find(id);
             return View(value);
         }
+
         [HttpPost]
         public ActionResult UpdateService(TblService p)
         {

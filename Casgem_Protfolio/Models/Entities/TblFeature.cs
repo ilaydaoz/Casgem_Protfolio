@@ -17,6 +17,6 @@ namespace Casgem_Protfolio.Models.Entities
         public int FeatureID { get; set; }
         public string FeatureTitle { get; set; }
         public string FeatureDescription { get; set; }
-        public string FeatureİmageURL { get; set; }
+        public string FeatureImageURL { get; set; }
     }
 }

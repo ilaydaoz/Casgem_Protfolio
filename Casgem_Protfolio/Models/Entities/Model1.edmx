@@ -12,7 +12,7 @@
           <Property Name="FeatureID" Type="int" Nullable="false" />
           <Property Name="FeatureTitle" Type="nchar" MaxLength="1000" />
           <Property Name="FeatureDescription" Type="nchar" MaxLength="1000" />
-          <Property Name="FeatureİmageURL" Type="nchar" MaxLength="1000" />
+          <Property Name="FeatureImageURL" Type="nchar" MaxLength="1000" />
         </EntityType>
         <EntityType Name="TblMessage">
           <Key>
@@ -61,7 +61,7 @@
           <Property Name="FeatureID" Type="Int32" Nullable="false" />
           <Property Name="FeatureTitle" Type="String" MaxLength="1000" FixedLength="true" Unicode="true" />
           <Property Name="FeatureDescription" Type="String" MaxLength="1000" FixedLength="true" Unicode="true" />
-          <Property Name="FeatureİmageURL" Type="String" MaxLength="1000" FixedLength="true" Unicode="true" />
+          <Property Name="FeatureImageURL" Type="String" MaxLength="1000" FixedLength="true" Unicode="true" />
         </EntityType>
         <EntityType Name="TblMessage">
           <Key>
@@ -110,7 +110,7 @@
                 <ScalarProperty Name="FeatureID" ColumnName="FeatureID" />
                 <ScalarProperty Name="FeatureTitle" ColumnName="FeatureTitle" />
                 <ScalarProperty Name="FeatureDescription" ColumnName="FeatureDescription" />
-                <ScalarProperty Name="FeatureİmageURL" ColumnName="FeatureİmageURL" />
+                <ScalarProperty Name="FeatureImageURL" ColumnName="FeatureImageURL" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
