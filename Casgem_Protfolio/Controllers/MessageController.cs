@@ -6,23 +6,25 @@ namespace Casgem_Protfolio.Controllers
 {
     public class MessageController : Controller
     {
-        casgemPorfolioEntities db = new casgemPorfolioEntities();
+        CasgemPortfolioEntities db = new CasgemPortfolioEntities();
         public ActionResult Index()
         {
             var values = db.TblMessage.ToList();
             return View(values);
         }
-        public ActionResult DeleteMessage(int id)
+
+        public ActionResult MessageDelete(int id)
         {
-            var value = db.TblMessage.Find(id);
-            db.TblMessage.Remove(value);
+            var values = db.TblMessage.Find(id);
+            db.TblMessage.Remove(values);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
         public ActionResult MessageDetails(int id)
         {
-            var value = db.TblMessage.Find(id);
-            return View(value);
+            var values = db.TblMessage.Find(id);
+            return View(values);
         }
     }
 }

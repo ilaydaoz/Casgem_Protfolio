@@ -16,9 +16,11 @@ namespace Casgem_Protfolio.Models.Entities
     {
         public int EmployeeID { get; set; }
         public string EmployeeName { get; set; }
-        public string EmployeeSurname { get; set; }
+        public string EmployeSurname { get; set; }
         public string EmployeeCity { get; set; }
         public Nullable<decimal> EmployeeSalary { get; set; }
         public Nullable<int> EmployeeDepartment { get; set; }
+    
+        public virtual TblDepartment TblDepartment { get; set; }
     }
 }

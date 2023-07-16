@@ -1,0 +1,29 @@
+﻿@model List<Casgem_Protfolio.Models.Entities.TblAchievement>
+
+<section class="w3l-services">
+    <div class="w3l-achievements py-5" id="services">
+        <div class="container py-lg-5">
+            <h5 class="title-small text-center">Eğitim & Sertifika</h5>
+            <h3 class="title-big text-center mb-sm-5 mb-4">Kişisel Başarımlar</h3>
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="col-lg-6 item">
+                        <div class="card">
+                            <div class="box-wrap">
+                                <div class="icon">
+                                    <span class="@item.Icon"></span>
+                                </div>
+                                <h4>@item.Title</h4>
+                                <p>
+                                    @item.Description
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+</section>

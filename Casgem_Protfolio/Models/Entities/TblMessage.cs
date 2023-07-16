@@ -16,7 +16,7 @@ namespace Casgem_Protfolio.Models.Entities
     {
         public int MessageID { get; set; }
         public string NameSurname { get; set; }
-        public string SendMail { get; set; }
+        public string SenderMail { get; set; }
         public string MessageSubject { get; set; }
         public string Content { get; set; }
     }

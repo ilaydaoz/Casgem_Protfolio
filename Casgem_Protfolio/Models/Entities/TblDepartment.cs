@@ -14,7 +14,16 @@ namespace Casgem_Protfolio.Models.Entities
     
     public partial class TblDepartment
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public TblDepartment()
+        {
+            this.TblEmployee = new HashSet<TblEmployee>();
+        }
+    
         public int DepartmentID { get; set; }
         public string DepartmentName { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TblEmployee> TblEmployee { get; set; }
     }
 }

@@ -6,18 +6,19 @@ namespace Casgem_Protfolio.Controllers
 {
     public class ServiceController : Controller
     {
-        casgemPorfolioEntities db = new casgemPorfolioEntities();
-
+        CasgemPortfolioEntities db = new CasgemPortfolioEntities();
         public ActionResult Index()
         {
             var values = db.TblService.ToList();
             return View(values);
         }
+
         [HttpGet]
         public ActionResult AddService()
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult AddService(TblService p)
         {
@@ -25,10 +26,11 @@ namespace Casgem_Protfolio.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
         public ActionResult DeleteService(int id)
         {
-            var value = db.TblService.Find(id);
-            db.TblService.Remove(value);
+            var values = db.TblService.Find(id);
+            db.TblService.Remove(values);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -36,18 +38,19 @@ namespace Casgem_Protfolio.Controllers
         [HttpGet]
         public ActionResult UpdateService(int id)
         {
-            var value = db.TblService.Find(id);
-            return View(value);
+            var values = db.TblService.Find(id);
+
+            return View(values);
         }
 
         [HttpPost]
         public ActionResult UpdateService(TblService p)
         {
-            var value = db.TblService.Find(p.ServiceID);
-            value.ServiceTitle = p.ServiceTitle;
-            value.ServiceIcon = p.ServiceIcon;
-            value.ServiceNumber = p.ServiceNumber;
-            value.ServiceContent = p.ServiceContent;
+            var values = db.TblService.Find(p.ServiceID);
+            values.ServiceTitle = p.ServiceTitle;
+            values.ServiceNumber = p.ServiceNumber;
+            values.ServiceContent = p.ServiceContent;
+            values.ServiceIcon = p.ServiceIcon;
             db.SaveChanges();
             return RedirectToAction("Index");
         }

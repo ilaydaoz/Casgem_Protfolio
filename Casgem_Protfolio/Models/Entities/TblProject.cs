@@ -16,7 +16,6 @@ namespace Casgem_Protfolio.Models.Entities
     {
         public int ProjectID { get; set; }
         public string ProjectName { get; set; }
-        public string ProjectDetails { get; set; }
-        public string ProjectURL { get; set; }
+        public string ProjectContent { get; set; }
     }
 }

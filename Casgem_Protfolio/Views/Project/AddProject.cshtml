@@ -1,20 +1,19 @@
-﻿
+﻿@model Casgem_Protfolio.Models.Entities.TblProject
 @{
     ViewBag.Title = "AddProject";
     Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
 }
 
 <h2>Proje Ekleme Sayfası</h2>
-
 <form method="post">
-    <label>Proje adı</label>
-    <input type="text" class="form-control" name="ProjectName" />
+    @Html.HiddenFor(x => x.ProjectID)
+    @Html.Label("Proje Adı")
+    @Html.TextBoxFor(x => x.ProjectName, new { @class = "form-control" })
     <br />
-    <label>Proje Detayları</label>
-    <input type="text" class="form-control" name="ProjectDetails" />
+    @Html.Label("Hizmet İkonu")
+    @Html.TextBoxFor(x => x.ProjectContent, new { @class = "form-control" })
     <br />
-    <label>Proje Linki</label>
-    <input type="text" class="form-control" name="ProjectURL" />
-    <br />
-    <button class="btn btn-info">Hizmeti Kaydet</button>
+
+    <button class="btn btn-success">Projeyi Kaydet</button>
 </form>
+

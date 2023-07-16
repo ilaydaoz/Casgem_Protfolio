@@ -6,7 +6,6 @@
 }
 
 <h2>Hizmet Listesi</h2>
-
 <table class="table table-bordered">
     <tr>
         <th>#</th>
@@ -14,6 +13,7 @@
         <th>Sil</th>
         <th>Güncelle</th>
     </tr>
+
     @foreach (var item in Model)
     {
         <tr>
@@ -24,4 +24,6 @@
         </tr>
     }
 </table>
+
 <a href="/Service/AddService" class="btn btn-outline-primary">Yeni Hizmet Girişi</a>
+

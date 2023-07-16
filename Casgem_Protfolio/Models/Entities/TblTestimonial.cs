@@ -12,12 +12,12 @@ namespace Casgem_Protfolio.Models.Entities
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagrams
+    public partial class TblTestimonial
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public int TestimonialID { get; set; }
+        public string NameSurname { get; set; }
+        public string Country { get; set; }
+        public string TestimonialContent { get; set; }
+        public string ImageURL { get; set; }
     }
 }

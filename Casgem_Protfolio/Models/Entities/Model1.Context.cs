@@ -13,10 +13,10 @@ namespace Casgem_Protfolio.Models.Entities
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class casgemPorfolioEntities : DbContext
+    public partial class CasgemPortfolioEntities : DbContext
     {
-        public casgemPorfolioEntities()
-            : base("name=casgemPorfolioEntities")
+        public CasgemPortfolioEntities()
+            : base("name=CasgemPortfolioEntities")
         {
         }
     
@@ -25,14 +25,22 @@ namespace Casgem_Protfolio.Models.Entities
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<TblAchievement> TblAchievement { get; set; }
+        public virtual DbSet<TblAdmin> TblAdmin { get; set; }
+        public virtual DbSet<TblContact> TblContact { get; set; }
+        public virtual DbSet<TblDepartment> TblDepartment { get; set; }
+        public virtual DbSet<TblEmployee> TblEmployee { get; set; }
         public virtual DbSet<TblFeature> TblFeature { get; set; }
         public virtual DbSet<TblMessage> TblMessage { get; set; }
         public virtual DbSet<TblProject> TblProject { get; set; }
-        public virtual DbSet<TblService> TblService { get; set; }
         public virtual DbSet<TblResume> TblResume { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<TblDepartment> TblDepartment { get; set; }
-        public virtual DbSet<TblEmployee> TblEmployee { get; set; }
-        public virtual DbSet<TblTitle> TblTitle { get; set; }
+        public virtual DbSet<TblService> TblService { get; set; }
+        public virtual DbSet<TblSkill> TblSkill { get; set; }
+        public virtual DbSet<TblSkillDegree> TblSkillDegree { get; set; }
+        public virtual DbSet<TblSkillDescription> TblSkillDescription { get; set; }
+        public virtual DbSet<TblSocial> TblSocial { get; set; }
+        public virtual DbSet<TblTestimonial> TblTestimonial { get; set; }
+        public virtual DbSet<TblVideo> TblVideo { get; set; }
+        public virtual DbSet<TblWhoAmI> TblWhoAmI { get; set; }
     }
 }
